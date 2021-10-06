@@ -33,7 +33,7 @@ export default function AddPokemon() {
           <h2>Create your pokemon</h2>
         </div>
         
-        <input placeholder="id" {...register("id", { required: true })} className="input-value" />
+        <input placeholder="id" {...register("id", { required: true })} type="number" className="input-value" />
         <label>Give a beautiful name to your Pokemon</label>
         <input placeholder="name" {...register("name", { required: true, minlenght: 3 } )} className="input-value"  />
         <label>Share its image</label>
