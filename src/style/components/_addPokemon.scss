@@ -1,0 +1,24 @@
+.container-form-add {
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 50px;
+
+}   
+
+.container-form-add input {
+    margin: 35px;
+}
+
+
+.container-form-add select {
+    margin: 20px;
+}
+
+.input-value {
+    width: 200px;
+    height: 30px;
+}

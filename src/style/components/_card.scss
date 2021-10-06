@@ -1,0 +1,114 @@
+@import '../utils/mixins';
+
+
+.container-pokemon {
+    background-color:  #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    width: 270px; 
+    border-radius: 15px;
+    border-bottom: solid 1px rgb(74, 74, 74);
+    padding: 15px;
+    margin: 20px; 
+}
+
+.electric {
+    @include card-style; 
+    background-color:  #ffff9c;
+    border: solid 1px rgb(255, 231, 50);
+}
+
+.fire {
+    @include card-style; 
+    background-color:  #ce3e3e;
+    border: solid 1px rgb(171, 27, 27);
+}
+
+.grass {
+    @include card-style; 
+    background-color:  #c1dfbc;
+    border: solid 1px rgb(48, 140, 69);
+}
+
+.water {
+    @include card-style; 
+    background-color:  #82b1e3;
+    border: solid 1px rgb(20, 38, 97);
+}
+
+.poison {
+    @include card-style; 
+    background-color:  #aa82e3;
+    border: solid 1px rgb(98, 41, 126);
+}
+
+.rock {
+    @include card-style; 
+    background-color:  #b6b6b6;
+    border: solid 1px rgb(56, 55, 57);
+}
+
+.ice {
+    @include card-style; 
+    background-color:  #96ebeb;
+    border: solid 1px rgb(20, 97, 111);
+}
+
+.psychic {
+    @include card-style; 
+    background-color:  #85768a;
+    border: solid 1px rgb(79, 45, 91);
+}
+
+.fighting {
+    @include card-style; 
+    background-color:  #ffc175;
+    border: solid 1px rgb(91, 65, 45);
+}
+
+.normal {
+    @include card-style; 
+    background-color: #ffd5ff;
+    border: solid 1px rgb(123, 108, 120);
+}
+
+.bug {
+    @include card-style; 
+    background-color: #d5ffe8;
+    border: solid 1px rgb(5, 75, 25);
+}
+
+.fairy {
+    @include card-style; 
+    background-color: #fffef7;
+    border: solid 1px rgb(238, 101, 250);
+}
+
+.ground {
+    @include card-style; 
+    background-color: #b59f7e;
+    border: solid 1px rgb(103, 81, 43);
+}
+
+.dragon {
+    @include card-style; 
+    background-color: #873a3a;
+    border: solid 1px rgb(92, 22, 22);
+}
+
+
+.container-image {
+    display: flex;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    background-color: white;
+    border-radius: 15px;
+    border: rgb(193, 193, 193) solid 2px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.container-image img {
+    position: relative;
+    align-self: center;
+}
+

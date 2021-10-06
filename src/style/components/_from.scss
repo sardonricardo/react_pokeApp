@@ -1,0 +1,24 @@
+.container-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.container-list {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 35vw;
+    margin: 50px;
+}
+
+.name-input {
+    font-size: 50px;
+}
