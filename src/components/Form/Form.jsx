@@ -4,13 +4,14 @@ import ListaPokemon from '../ListaPokemon/ListaPokemon';
 import { userContext } from '../../context/useContext';
 import { Input } from '@nextui-org/react';
 import logo from "../../assets/logogrey.png"
+import cogoToast from 'cogo-toast';
 
 
 const Form = () => {
 
   const [inputValue, setValue] = useState("");
   /* const [previous, setPrevious] = useState(""); */ //Vacío para evitar la precarga. 
-  const [debouncedValue] = useDebounce(inputValue, 2000);
+  const [debouncedValue] = useDebounce(inputValue, 1000);
   const {newPokemon, setNewPokemon} = useContext(userContext)
   /* const [posts, setPosts] = useState([]);//Para los pokemons.  */
 
@@ -35,7 +36,7 @@ const Form = () => {
 
       }catch(error){
 
-        setNewPokemon([]); //Restaurar pokemons. 
+        cogoToast.error('This Pokemon does not exist');//Restaurar pokemons. 
 
       }
     },

@@ -6,7 +6,6 @@ import {userContext} from '../../context/useContext'
 
 export default function AddPokemon() {
 
-
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
   const {newPokemon, setNewPokemon} = useContext(userContext)
@@ -23,14 +22,11 @@ export default function AddPokemon() {
       console.log('Prueba otra vez!')
     }
   }
-
   /* const value = useContext(useContext); */
   
   return (
-
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <>
-    
     <form onSubmit={handleSubmit(onSubmit)} className="container-form-add">
       
         <div>

@@ -30,3 +30,8 @@ a {
 a:visited {
     color: black;
 }
+
+a:hover {
+    color: #eeeeee;
+    transition: 1s;
+}

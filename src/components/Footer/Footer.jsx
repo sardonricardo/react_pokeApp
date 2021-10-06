@@ -1,12 +1,13 @@
 
-
 import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
-      
-    </div>
+    <footer>
+      <div className="text-container">
+      <h5>@Copyright 2021 - Ricardo Sardon</h5>
+      </div>
+    </footer>
   )
 }
 

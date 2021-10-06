@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import './style/styles.scss'
+import './App.css'
 
 
 const App = () => {
@@ -29,8 +30,7 @@ const App = () => {
         </userContext.Provider>
         </BrowserRouter>
         
-
-          <Footer/>
+        <Footer/>
 
     </div>
   );
