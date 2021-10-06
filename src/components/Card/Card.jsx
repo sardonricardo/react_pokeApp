@@ -2,7 +2,7 @@ import React from 'react';
 
 const PokeCard = (props) => {
 
-  const pok = props.info
+  const poke = props.info
 
   console.log(props)
 
@@ -11,14 +11,14 @@ const PokeCard = (props) => {
     <div className="container-pokemon" >
         <p className="pokemon-number">#{props.info.id}</p>
         <div className="container-image">
-          <img src={props.info.sprites.front_default} alt="" />
+          <img src={poke.sprites.front_default?poke.sprites.front_default:"..."} alt="" />
         </div>
-        <h1>{props.info.name}</h1>
+        <h1>{poke.name?poke.name: ""}</h1>
         <div className="container-data">
-        <p>Weight: {props.info.weight} kg</p>
-        <p>Height: {props.info.height} ft</p>
+        <p>Weight: {poke.weight?poke.weight:"..."} kg</p>
+        <p>Height: {poke.height?poke.height:"..."} ft</p>
         <p>Ability: {props.info.abilities[0].ability.name}</p>
-        <p className={props.info.types[0].type.name}>{props.info.types[0].type.name}</p>
+        <p className={poke.types[0].type.name?poke.types[0].type.name:"..."}>{props.info.types[0].type.name}</p>
         <p>Base experience: {props.info.base_experience} exp</p>
         </div>
 

@@ -8,6 +8,7 @@ export default function AddPokemon() {
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
+  const [inputValue, setValue] = useState("");
   const {newPokemon, setNewPokemon} = useContext(userContext)
 
   const onSubmit = (info) => {
@@ -24,6 +25,15 @@ export default function AddPokemon() {
   }
   /* const value = useContext(useContext); */
   
+  /*  const handleChange = async (e) => {
+    e.preventDefault();
+
+    setValue(e.target.value);
+    await new Promise(resolve => setTimeout(resolve, 4000))
+    e.target.value = ''
+  }  */
+
+
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <>
@@ -33,11 +43,11 @@ export default function AddPokemon() {
           <h2>Create your pokemon</h2>
         </div>
         
-        <input placeholder="id" {...register("id", { required: true })} type="number" className="input-value" />
+        <input placeholder="id" {...register("id", { required: true })} type="number" className="input-value" /* onChange={handleChange} */ />
         <label>Give a beautiful name to your Pokemon</label>
         <input placeholder="name" {...register("name", { required: true, minlenght: 3 } )} className="input-value"  />
         <label>Share its image</label>
-        <input placeholder="image" {...register("image", { required: true })} className="input-value"  />
+        <input placeholder="image" {...register("image")} className="input-value"  />
         <h3>Which type is it?</h3>
         <div className="select-container">
         <select {...register("typeOne")}>
@@ -79,7 +89,7 @@ export default function AddPokemon() {
       {errors.id && errors.name && <span>This field is required</span>}
 
      
-      <input type="submit" value="add Pokemon" />
+      <input type="submit" value="add Pokemon"/>
 
     </form>
     </>

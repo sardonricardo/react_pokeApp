@@ -49,10 +49,12 @@ const Form = () => {
     setValue(e.target.elements.name.value);
   }; */
 
-  const handleChange = (e) => {
+  const handleChange = async (e) => {
     e.preventDefault();
    /*  setPrevious(inputValue) */
     setValue(e.target.value);
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    e.target.value = ''
   }
 
   return <section className="container-form">
